@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #000;
+  border-color: #3b3b3b;
+  user-select: none;
+}
+
+canvas {
+  touch-action: none;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  /* Colors */
+  .bg-blue {
+    background-color: #2997FF;
+  }
+  .bg-gray {
+    background-color: #86868b;
+  }
+  .bg-gray-100 {
+    background-color: #94928d;
+  }
+  .bg-gray-200 {
+    background-color: #afafaf;
+  }
+  .bg-gray-300 {
+    background-color: #42424570;
+  }
+  .bg-zinc {
+    background-color: #101010;
+  }
+  .text-blue {
+    color: #2997FF;
+  }
+  .text-gray {
+    color: #86868b;
+  }
+  .text-gray-100 {
+    color: #94928d;
+  }
+  .text-gray-200 {
+    color: #afafaf;
+  }
+  .text-gray-300 {
+    color: #42424570;
+  }
+  .text-zinc {
+    color: #101010;
+  }
+
+  /* Components */
+  .scrim-max-width {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    position: relative;
+    max-width: 1120px;
+  }
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-height {
+    height: calc(100vh - 60px);
+  }
+
+  .btn {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 1.5rem;
+    --tw-bg-opacity: 1;
+    background-color: #2997FF;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-width: 1px;
+    border-color: transparent;
+  }
+  .btn:hover {
+    background-color: transparent;
+    --tw-text-opacity: 1;
+    color: #2997FF;
+    border-color: #2997FF;
+  }
+
+  /* Add all other utility classes from your original config here */
+  /* Convert each @apply rule to plain CSS */
+}
+
+/* Font Family */
+@layer base {
+  @font-face {
+    font-family: 'Outfit';
+    src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+  }
+}
