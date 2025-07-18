@@ -13,6 +13,8 @@
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.5.1",
     "@react-three/fiber": "^9.2.0",
+    "@sentry/react": "^9.40.0",
+    "@sentry/vite-plugin": "^3.6.0",
     "@tailwindcss/vite": "^4.1.11",
     "gsap": "^3.13.0",
     "react": "^19.1.0",

@@ -37,8 +37,8 @@ const Model = () => {
             })
         }
         if (size === 'small') {
-            animateWithGsapTimeline(tl, small, smallRotation, '#view1', '#view2', {
-                transform: 'translateX(-100%)',
+            animateWithGsapTimeline(tl, large, largeRotation,'#view2', '#view1', {
+                transform: 'translateX(0)',
                 duration: 2
             })
         }

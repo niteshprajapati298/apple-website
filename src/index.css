@@ -127,36 +127,6 @@ canvas {
     position: relative;
     max-width: 1120px;
   }
-  /* styles.css */
-  .hero-title {
-    text-align: center;
-    font-weight: 600; /* font-semibold */
-    font-size: 1.875rem; /* text-3xl = 30px */
-    line-height: 2.25rem; /* line-height matching text-3xl */
-    color: #f3f4f6; /* text-gray-100 */
-    opacity: 0;
-  }
-
-  /* Responsive (Tailwind's max-md = max-width: 768px) */
-  @media (max-width: 768px) {
-    .hero-title {
-      margin-bottom: 2.5rem; /* mb-10 = 40px */
-    }
-  }
-  .link {
-    color: #3b82f6; /* Tailwind's 'text-blue' is likely 'text-blue-500' */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-size: 1.25rem; /* text-xl = 20px */
-    line-height: 1.75rem;
-    opacity: 0;
-    transform: translateY(5rem); /* translate-y-20 = 80px down */
-  }
-
-  .link:hover {
-    text-decoration: underline;
-  }
 
   .flex-center {
     display: flex;
@@ -188,29 +158,9 @@ canvas {
     border-color: #2997ff;
   }
 
-  /* Add all other utility classes from your original config here */
-  /* Convert each @apply rule to plain CSS */
-}
-.video-carousel_container {
-  position: relative;
-  width: 88vw;
-  height: 35vh;
 }
 
-@media (min-width: 640px) {
-  /* sm */
-  .video-carousel_container {
-    width: 70vw;
-    height: 50vh;
-  }
-}
 
-@media (min-width: 768px) {
-  /* md */
-  .video-carousel_container {
-    height: 70vh;
-  }
-}
 .common-padding {
   padding-top: 5rem; /* py-20 => 80px */
   padding-bottom: 5rem;
@@ -247,6 +197,201 @@ canvas {
     margin-bottom: 0;   /* lg:mb-0 */
   }
 }
+
+
+.feature-text {
+  color: gray;
+  max-width: 28rem; /* Same as max-w-md */
+  font-size: 1.125rem; /* Base: text-lg */
+  font-weight: 600; /* font-semibold */
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+@media (min-width: 768px) {
+  .feature-text {
+    font-size: 1.25rem; /* md:text-xl */
+  }
+}
+
+.feature-text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem; /* mt-10 */
+  gap: 1.25rem; /* gap-5 */
+}
+
+@media (min-width: 768px) {
+  .feature-text-container {
+    flex-direction: row;
+    margin-top: 4rem; /* md:mt-16 */
+  }
+}
+.feature-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.feature-video-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* gap-5 */
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .feature-video-container {
+    flex-direction: row;
+  }
+}
+.link {
+  color: #3b82f6; /* Tailwind's blue-500 */
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem; /* text-xl */
+  opacity: 0;
+  transform: translateY(5rem); /* translate-y-20 */
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.control-btn {
+  margin-left: 1rem; /* ml-4 */
+  padding: 1rem; /* p-4 */
+  border-radius: 9999px; /* rounded-full */
+  background-color: #d1d5db; /* bg-gray-300 */
+  backdrop-filter: blur(8px); /* backdrop-blur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  text-align: center;
+  font-weight: 600; /* font-semibold */
+  font-size: 1.875rem; /* text-3xl */
+  color: #f3f4f6; /* text-gray-100 */
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    margin-bottom: 2.5rem; /* mb-10 */
+  }
+}
+
+.hiw-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hiw-title {
+    font-size: 4.5rem; /* text-7xl */
+  }
+}
+
+.hiw-subtitle {
+  color: #9ca3af; /* text-gray */
+  font-weight: 600;
+  font-size: 1.25rem; /* text-xl */
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hiw-subtitle {
+    font-size: 1.5rem; /* text-2xl */
+  }
+}
+
+.hiw-video {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  border-radius: 56px;
+  overflow: hidden;
+}
+
+.hiw-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6rem; /* gap-24 */
+}
+
+@media (min-width: 768px) {
+  .hiw-text-container {
+    flex-direction: row;
+  }
+}
+
+.hiw-text {
+  color: #9ca3af; /* text-gray */
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 400; /* normal */
+}
+
+@media (min-width: 768px) {
+  .hiw-text {
+    font-weight: 600; /* md:font-semibold */
+  }
+}
+
+.hiw-bigtext {
+  color: #ffffff;
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 400; /* normal */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .hiw-bigtext {
+    font-size: 3rem; /* text-5xl */
+    font-weight: 600;
+  }
+}
+
+.video-carousel_container {
+  position: relative;
+  width: 88vw;
+  height: 35vh;
+}
+
+@media (min-width: 640px) {
+  .video-carousel_container {
+    width: 70vw;
+    height: 50vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .video-carousel_container {
+    height: 70vh;
+  }
+}
+
+.g_fadeIn {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
 
 
 /* Font Family */
